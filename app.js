@@ -1,0 +1,3 @@
+'use strict';
+const samples={Paris:{temperature:18,condition:'Éclaircies',humidity:62,wind:12},Lyon:{temperature:21,condition:'Ensoleillé',humidity:48,wind:8},Marseille:{temperature:25,condition:'Ciel dégagé',humidity:45,wind:19}};
+function render(){const city=document.querySelector('#city').value;const weather=samples[city];document.querySelector('#place').textContent=city+' · Démonstration';document.querySelector('#temperature').textContent=weather.temperature+' °C';document.querySelector('#condition').textContent=weather.condition;document.querySelector('#details').textContent='Humidité : '+weather.humidity+' % · Vent : '+weather.wind+' km/h';}document.querySelector('#city').addEventListener('change',render);render();
